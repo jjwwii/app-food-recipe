@@ -34,44 +34,44 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       appBar: AppBar(
+        elevation: 0,
         title: const Text(
           "Components",
           style: AppTextStyles.largeTextBold,
         ),
       ),
-      body: GestureDetector(
-        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-        child: ListView(
-
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          children: [
-            Button.big(
-              "Big Button",
-              onPressed: () {
-                print("Big Button");
-              },
-            ),
-            const Height(10),
-            Button.medium(
-              "Medium Button",
-              onPressed: () {
-                print("Medium Button");
-              },
-            ),
-            const Height(10),
-            Button.small(
-              "Small Button",
-              onPressed: () {
-                print("Small Button");
-              },
-            ),
-            const Height(10),
-            const CustomTextField(label: "Label", hintText: "hintText"),
-            const Height(10),
-            // const FilterButton(child: Text("filter"),),
-          ],
-        ),
+      body: Column(
+        children: [
+          Button.big(
+            "Big Button",
+            onPressed: () {
+              print("Big Button");
+            },
+          ),
+          const Height(10),
+          Button.medium(
+            "Medium Button",
+            onPressed: () {
+              print("Medium Button");
+            },
+          ),
+          const Height(10),
+          Button.small(
+            "Small Button",
+            onPressed: () {
+              print("Small Button");
+            },
+          ),
+          const Height(10),
+          const CustomTextField(label: "Label", hintText: "hintText"),
+          const Height(10),
+          const FilterButton(text: "test1",),
+          const Height(10),
+          const FilterButton(text: "test2", isSelected: true,),
+          const Height(10),
+        ],
       ),
     );
   }
