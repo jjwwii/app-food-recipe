@@ -32,4 +32,7 @@ abstract class AppColors {
   // green
   static const Color success = Color(0xff31B057);
 
+
+  static const Color shadow = Color(0x1a696969);
+
 }

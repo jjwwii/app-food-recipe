@@ -2,6 +2,7 @@ import 'package:app_food_recipe/core/widgets/button.dart';
 import 'package:app_food_recipe/core/widgets/custom_text_field.dart';
 import 'package:app_food_recipe/core/widgets/filter_button.dart';
 import 'package:app_food_recipe/core/widgets/height_and_width.dart';
+import 'package:app_food_recipe/presentation/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'core/constants/constants.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           fontFamily: "Poppins"),
-      home: const TestPage(),
+      home: const SignInScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
